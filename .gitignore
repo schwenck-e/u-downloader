@@ -1,0 +1,39 @@
+# u-downloader
+
+# Logs and temporary files
+*.log
+*.tmp
+/tmp/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Backup files
+*.backup
+*.bak
+*~
+*.swp
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Test files
+test/
+tests/
+*.test.sh
+
+# Downloads (examples)
+downloads/
+*.mp4
+*.mp3
+*.webm
+*.m4a
+
+# User-specific configs
+config.local.sh
+.env.local

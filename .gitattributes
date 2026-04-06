@@ -1,0 +1,15 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Scripts should have LF endings
+*.sh text eol=lf
+
+# These files are text and should be normalized
+*.md text
+*.txt text
+
+# Binary files
+*.png binary
+*.jpg binary
+*.mp4 binary
+*.mp3 binary
