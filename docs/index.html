@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="u-downloader - Universal cross-platform video downloader supporting 1872+ sites">
+    <meta name="keywords" content="video downloader, youtube downloader, cross-platform, linux, macos">
+    <title>u-downloader - Universal Video Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <span class="logo">u-downloader</span>
+                <span class="version">v1.0.0</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#docs">Docs</a></li>
+                <li><a href="https://github.com/schwenck-e/u-downloader" target="_blank" class="btn-github">GitHub</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Universal Video Downloader
+                    <span class="gradient-text">for Everyone</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Professional cross-platform CLI tool supporting 1872+ sites.<br>
+                    Linux • macOS • BSD • WSL
+                </p>
+                <div class="hero-buttons">
+                    <a href="#installation" class="btn btn-primary">Get Started</a>
+                    <a href="https://github.com/schwenck-e/u-downloader" target="_blank" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">1872+</div>
+                        <div class="stat-label">Sites Supported</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Platforms</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Open Source</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-demo">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-button red"></span>
+                        <span class="terminal-button yellow"></span>
+                        <span class="terminal-button green"></span>
+                        <span class="terminal-title">u-downloader</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">./downloader.sh https://youtube.com/watch?v=...</span>
+                        </div>
+                        <div class="terminal-output">
+╔════════════════════════════════════════╗
+║          u-downloader v1.0.0           ║
+╚════════════════════════════════════════╝
+
+[6/7] ████████████████████████░░░░░░░░░░░░░░░░ 75%
+
+✓ Download completo
+✓ Arquivo: video.mp4 (250MB)
+✓ Tempo: 45s
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need in a modern video downloader</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Universal Support</h3>
+                    <p>Download from 1872+ sites including YouTube, Vimeo, Instagram, TikTok, Facebook, Twitch and more.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Cross-Platform</h3>
+                    <p>Works seamlessly on Linux, macOS, BSD, and WSL. One tool for all your systems.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Professional interface with real-time progress bars and smart download management.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📁</div>
+                    <h3>Smart Organization</h3>
+                    <p>Automatically organizes playlists into subfolders. Never lose track of your downloads.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Audio Extraction</h3>
+                    <p>Extract audio to MP3 format. Perfect for music and podcasts.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>Optional browser cookie support for private content. Your data stays local.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Sites -->
+    <section class="supported-sites">
+        <div class="container">
+            <h2 class="section-title">Works With Your Favorite Sites</h2>
+            <div class="sites-grid">
+                <div class="site-badge">YouTube</div>
+                <div class="site-badge">Vimeo</div>
+                <div class="site-badge">Instagram</div>
+                <div class="site-badge">TikTok</div>
+                <div class="site-badge">Facebook</div>
+                <div class="site-badge">Twitch</div>
+                <div class="site-badge">Twitter</div>
+                <div class="site-badge">Reddit</div>
+                <div class="site-badge">SoundCloud</div>
+                <div class="site-badge">Dailymotion</div>
+                <div class="site-badge">Bandcamp</div>
+                <div class="site-badge">+1861 more</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="installation">
+        <div class="container">
+            <h2 class="section-title">Quick Installation</h2>
+            <p class="section-subtitle">Choose your platform and get started in minutes</p>
+            
+            <div class="tabs">
+                <button class="tab active" data-tab="linux">Linux</button>
+                <button class="tab" data-tab="macos">macOS</button>
+                <button class="tab" data-tab="bsd">BSD</button>
+            </div>
+            
+            <div class="tab-content active" id="linux">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Debian/Ubuntu</span>
+                        <button class="copy-btn" data-code="debian">Copy</button>
+                    </div>
+                    <pre><code id="debian">sudo apt update
+sudo apt install python3-pip ffmpeg curl
+pip3 install yt-dlp
+git clone https://github.com/schwenck-e/u-downloader.git
+cd u-downloader
+chmod +x downloader.sh</code></pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Arch Linux</span>
+                        <button class="copy-btn" data-code="arch">Copy</button>
+                    </div>
+                    <pre><code id="arch">sudo pacman -S yt-dlp ffmpeg curl git
+git clone https://github.com/schwenck-e/u-downloader.git
+cd u-downloader
+chmod +x downloader.sh</code></pre>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="macos">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Homebrew (recommended)</span>
+                        <button class="copy-btn" data-code="brew">Copy</button>
+                    </div>
+                    <pre><code id="brew">brew install yt-dlp ffmpeg
+git clone https://github.com/schwenck-e/u-downloader.git
+cd u-downloader
+chmod +x downloader.sh</code></pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Manual Installation</span>
+                        <button class="copy-btn" data-code="manual">Copy</button>
+                    </div>
+                    <pre><code id="manual">git clone https://github.com/schwenck-e/u-downloader.git
+cd u-downloader
+chmod +x install-dependencies.sh
+./install-dependencies.sh</code></pre>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="bsd">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>FreeBSD</span>
+                        <button class="copy-btn" data-code="freebsd">Copy</button>
+                    </div>
+                    <pre><code id="freebsd">pkg install yt-dlp ffmpeg git
+git clone https://github.com/schwenck-e/u-downloader.git
+cd u-downloader
+chmod +x downloader.sh</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Examples -->
+    <section id="usage" class="usage">
+        <div class="container">
+            <h2 class="section-title">Usage Examples</h2>
+            <p class="section-subtitle">Simple commands for powerful results</p>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <h3>Download a Video</h3>
+                    <div class="code-block">
+                        <pre><code>./downloader.sh https://youtube.com/watch?v=VIDEO_ID</code></pre>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Download in Specific Quality</h3>
+                    <div class="code-block">
+                        <pre><code>./downloader.sh -q 1080 https://vimeo.com/VIDEO_ID</code></pre>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Extract Audio Only (MP3)</h3>
+                    <div class="code-block">
+                        <pre><code>./downloader.sh -a https://soundcloud.com/track</code></pre>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Download Entire Playlist</h3>
+                    <div class="code-block">
+                        <pre><code>./downloader.sh -p https://youtube.com/playlist?list=ID</code></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="options-table">
+                <h3>Command Options</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>-q, --quality</code></td>
+                            <td>Video quality (best, 1080p, 720p, 480p)</td>
+                        </tr>
+                        <tr>
+                            <td><code>-o, --output</code></td>
+                            <td>Output directory (default: ~/Downloads)</td>
+                        </tr>
+                        <tr>
+                            <td><code>-p, --playlist</code></td>
+                            <td>Download entire playlist</td>
+                        </tr>
+                        <tr>
+                            <td><code>-a, --audio-only</code></td>
+                            <td>Extract audio only (MP3)</td>
+                        </tr>
+                        <tr>
+                            <td><code>-c, --cookies</code></td>
+                            <td>Use browser cookies (safari, chrome, firefox)</td>
+                        </tr>
+                        <tr>
+                            <td><code>-u, --update</code></td>
+                            <td>Update yt-dlp to latest version</td>
+                        </tr>
+                        <tr>
+                            <td><code>-v, --verbose</code></td>
+                            <td>Show detailed output</td>
+                        </tr>
+                        <tr>
+                            <td><code>-h, --help</code></td>
+                            <td>Show help message</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation -->
+    <section id="docs" class="docs">
+        <div class="container">
+            <h2 class="section-title">Documentation</h2>
+            <div class="docs-grid">
+                <a href="https://github.com/schwenck-e/u-downloader/blob/develop/README.md" class="doc-card" target="_blank">
+                    <div class="doc-icon">📖</div>
+                    <h3>User Guide</h3>
+                    <p>Complete documentation and usage examples</p>
+                </a>
+                
+                <a href="https://github.com/schwenck-e/u-downloader/blob/develop/TROUBLESHOOTING.md" class="doc-card" target="_blank">
+                    <div class="doc-icon">🔧</div>
+                    <h3>Troubleshooting</h3>
+                    <p>Common issues and solutions</p>
+                </a>
+                
+                <a href="https://github.com/schwenck-e/u-downloader/blob/develop/CHANGELOG.md" class="doc-card" target="_blank">
+                    <div class="doc-icon">📝</div>
+                    <h3>Changelog</h3>
+                    <p>Version history and updates</p>
+                </a>
+                
+                <a href="https://github.com/schwenck-e/u-downloader/issues" class="doc-card" target="_blank">
+                    <div class="doc-icon">💬</div>
+                    <h3>Support</h3>
+                    <p>Report issues and get help</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-large">u-downloader</div>
+                    <p>Universal cross-platform video downloader</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Project</h4>
+                        <ul>
+                            <li><a href="https://github.com/schwenck-e/u-downloader" target="_blank">GitHub</a></li>
+                            <li><a href="https://github.com/schwenck-e/u-downloader/releases" target="_blank">Releases</a></li>
+                            <li><a href="https://github.com/schwenck-e/u-downloader/blob/develop/CHANGELOG.md" target="_blank">Changelog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://github.com/schwenck-e/u-downloader/blob/develop/README.md" target="_blank">Documentation</a></li>
+                            <li><a href="https://github.com/schwenck-e/u-downloader/blob/develop/TROUBLESHOOTING.md" target="_blank">Troubleshooting</a></li>
+                            <li><a href="https://github.com/schwenck-e/u-downloader/issues" target="_blank">Issues</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="https://github.com/schwenck-e/u-downloader/discussions" target="_blank">Discussions</a></li>
+                            <li><a href="https://github.com/schwenck-e/u-downloader/blob/develop/LICENSE" target="_blank">License</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 u-downloader. Released under the MIT License.</p>
+                <p>Made with ❤️ for the open source community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
