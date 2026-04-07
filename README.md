@@ -56,7 +56,15 @@ sudo pacman -S yt-dlp ffmpeg curl deno
 
 ### macOS
 
-**Opção 1: Instalador Automático (Recomendado para macOS 12)**
+**Opção 1: Via Homebrew Tap (Recomendado)**
+```bash
+brew tap schwenck-e/tap
+brew install u-downloader
+```
+
+Tudo pronto! O comando `u-downloader` está disponível globalmente.
+
+**Opção 2: Instalador Automático (macOS 12 ou sem Homebrew)**
 ```bash
 chmod +x install-dependencies.sh
 ./install-dependencies.sh
@@ -68,12 +76,12 @@ source ~/.zshrc  # ou source ~/.bash_profile
 - ✅ ffmpeg & ffprobe (processamento de vídeo)
 - ✅ deno (JavaScript runtime - elimina warnings)
 
-**Opção 2: Via Homebrew (se disponível)**
+**Opção 3: Via Homebrew Core (dependências apenas)**
 ```bash
 brew install yt-dlp ffmpeg deno
 ```
 
-**Nota:** Se você está no macOS 12 e o Homebrew apresentar erros relacionados ao Xcode, use a Opção 1.
+**Nota:** Se você está no macOS 12 e o Homebrew apresentar erros relacionados ao Xcode, use a Opção 2.
 
 ## 🚀 Instalação
 
