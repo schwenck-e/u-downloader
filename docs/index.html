@@ -208,7 +208,20 @@ chmod +x downloader.sh</code></pre>
             <div class="tab-content" id="macos">
                 <div class="code-block">
                     <div class="code-header">
-                        <span>Homebrew (recommended)</span>
+                        <span>Homebrew Tap (recommended)</span>
+                        <button class="copy-btn" data-code="brew-tap">Copy</button>
+                    </div>
+                    <pre><code id="brew-tap">brew tap schwenck-e/tap
+brew install u-downloader</code></pre>
+                    <p style="color: #94a3b8; font-size: 0.875rem; margin-top: 0.5rem; padding: 0 1.5rem;">
+                        ✓ Installs everything (u-downloader + dependencies)<br>
+                        ✓ Global command available: <code style="background: #020617; padding: 0.2rem 0.4rem; border-radius: 0.25rem;">u-downloader</code>
+                    </p>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Homebrew (dependencies + manual clone)</span>
                         <button class="copy-btn" data-code="brew">Copy</button>
                     </div>
                     <pre><code id="brew">brew install yt-dlp ffmpeg
@@ -219,7 +232,7 @@ chmod +x downloader.sh</code></pre>
                 
                 <div class="code-block">
                     <div class="code-header">
-                        <span>Manual Installation</span>
+                        <span>Manual Installation (macOS 12 or without Homebrew)</span>
                         <button class="copy-btn" data-code="manual">Copy</button>
                     </div>
                     <pre><code id="manual">git clone https://github.com/schwenck-e/u-downloader.git
@@ -254,28 +267,44 @@ chmod +x downloader.sh</code></pre>
                 <div class="example-card">
                     <h3>Download a Video</h3>
                     <div class="code-block">
-                        <pre><code>./downloader.sh https://youtube.com/watch?v=VIDEO_ID</code></pre>
+                        <pre><code># If installed via Homebrew tap:
+u-downloader https://youtube.com/watch?v=VIDEO_ID
+
+# Or manual installation:
+./downloader.sh https://youtube.com/watch?v=VIDEO_ID</code></pre>
                     </div>
                 </div>
                 
                 <div class="example-card">
                     <h3>Download in Specific Quality</h3>
                     <div class="code-block">
-                        <pre><code>./downloader.sh -q 1080 https://vimeo.com/VIDEO_ID</code></pre>
+                        <pre><code># Homebrew:
+u-downloader -q 1080 https://vimeo.com/VIDEO_ID
+
+# Manual:
+./downloader.sh -q 1080 https://vimeo.com/VIDEO_ID</code></pre>
                     </div>
                 </div>
                 
                 <div class="example-card">
                     <h3>Extract Audio Only (MP3)</h3>
                     <div class="code-block">
-                        <pre><code>./downloader.sh -a https://soundcloud.com/track</code></pre>
+                        <pre><code># Homebrew:
+u-downloader -a https://soundcloud.com/track
+
+# Manual:
+./downloader.sh -a https://soundcloud.com/track</code></pre>
                     </div>
                 </div>
                 
                 <div class="example-card">
                     <h3>Download Entire Playlist</h3>
                     <div class="code-block">
-                        <pre><code>./downloader.sh -p https://youtube.com/playlist?list=ID</code></pre>
+                        <pre><code># Homebrew:
+u-downloader -p https://youtube.com/playlist?list=ID
+
+# Manual:
+./downloader.sh -p https://youtube.com/playlist?list=ID</code></pre>
                     </div>
                 </div>
             </div>

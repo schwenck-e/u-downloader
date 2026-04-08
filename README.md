@@ -85,20 +85,46 @@ brew install yt-dlp ffmpeg deno
 
 ## 🚀 Instalação
 
-1. Torne o script executável:
+### Via Homebrew (macOS - Recomendado)
+
+Se você instalou via Homebrew tap, já está pronto! O comando `u-downloader` está disponível globalmente:
+
+```bash
+u-downloader --help
+```
+
+### Instalação Manual
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/schwenck-e/u-downloader.git
+cd u-downloader
+```
+
+2. Torne o script executável:
 ```bash
 chmod +x downloader.sh
 ```
 
-2. (Opcional) Crie um alias no seu `.zshrc` ou `.bash_profile`:
+3. (Opcional) Crie um alias no seu `.zshrc` ou `.bash_profile`:
 ```bash
 echo 'alias ytdl="~/Documents/projects/downloader/downloader.sh"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
+Ou crie um link simbólico:
+```bash
+sudo ln -s "$(pwd)/downloader.sh" /usr/local/bin/u-downloader
+```
+
 ## 💻 Uso
 
-### Sintaxe básica
+### Se instalado via Homebrew:
+```bash
+u-downloader [opções] <URL_DO_VIDEO>
+```
+
+### Se instalação manual:
 ```bash
 ./downloader.sh [opções] <URL_DO_VIDEO>
 ```
@@ -118,56 +144,62 @@ source ~/.zshrc
 
 ## 📖 Exemplos
 
+**Nota:** Use `u-downloader` se instalou via Homebrew, ou `./downloader.sh` se instalação manual.
+
 ### Baixar um vídeo do YouTube com melhor qualidade
 ```bash
+# Homebrew:
+u-downloader https://www.youtube.com/watch?v=VIDEO_ID
+
+# Manual:
 ./downloader.sh https://www.youtube.com/watch?v=VIDEO_ID
 ```
 
 ### Baixar vídeo de outros sites
 ```bash
 # Vimeo
-./downloader.sh https://vimeo.com/123456789
+u-downloader https://vimeo.com/123456789
 
 # TikTok
-./downloader.sh https://tiktok.com/@user/video/ID
+u-downloader https://tiktok.com/@user/video/ID
 
 # Instagram
-./downloader.sh https://instagram.com/p/POST_ID/
+u-downloader https://instagram.com/p/POST_ID/
 
 # Twitch VOD
-./downloader.sh https://twitch.tv/videos/VIDEO_ID
+u-downloader https://twitch.tv/videos/VIDEO_ID
 
 # Facebook
-./downloader.sh https://facebook.com/watch/?v=VIDEO_ID
+u-downloader https://facebook.com/watch/?v=VIDEO_ID
 ```
 
 ### Baixar em 720p ou 1080p
 ```bash
-./downloader.sh -q 720p https://www.youtube.com/watch?v=VIDEO_ID
-./downloader.sh -q 1080 https://vimeo.com/VIDEO_ID
+u-downloader -q 720p https://www.youtube.com/watch?v=VIDEO_ID
+u-downloader -q 1080 https://vimeo.com/VIDEO_ID
 ```
 
 ### Baixar apenas áudio (MP3)
 ```bash
-./downloader.sh -a https://www.youtube.com/watch?v=VIDEO_ID
-./downloader.sh -a https://soundcloud.com/artist/track
+u-downloader -a https://www.youtube.com/watch?v=VIDEO_ID
+u-downloader -a https://soundcloud.com/artist/track
 ```
 
 ### Baixar playlist completa (cria subpasta automática)
 ```bash
-./downloader.sh -p https://www.youtube.com/playlist?list=PLAYLIST_ID
+u-downloader -p https://www.youtube.com/playlist?list=PLAYLIST_ID
 ```
 **Resultado:** Cria `~/Downloads/Nome da Playlist/` com todos os vídeos organizados
 
 ### Baixar playlist em MP3
 ```bash
-./downloader.sh -p -a https://www.youtube.com/playlist?list=PLAYLIST_ID
+u-downloader -p -a https://www.youtube.com/playlist?list=PLAYLIST_ID
 ```
 
 ### Usar cookies do navegador (para vídeos privados/bloqueados)
 ```bash
-./downloader.sh -c chrome https://www.youtube.com/watch?v=VIDEO_ID
-./downloader.sh -c safari https://instagram.com/p/POST_ID/
+u-downloader -c chrome https://www.youtube.com/watch?v=VIDEO_ID
+u-downloader -c safari https://instagram.com/p/POST_ID/
 ```
 **Nota:** Requer dar permissão "Acesso Total ao Disco" ao Terminal em Preferências do Sistema > Privacidade
 Use apenas se encontrar erro "confirme que não é um robô"
@@ -175,15 +207,15 @@ Use apenas se encontrar erro "confirme que não é um robô"
 ### Combinar opções
 ```bash
 # Playlist do Vimeo em 1080p
-./downloader.sh -p -q 1080 https://vimeo.com/showcase/PLAYLIST_ID
+u-downloader -p -q 1080 https://vimeo.com/showcase/PLAYLIST_ID
 
 # Áudio de playlist do SoundCloud
-./downloader.sh -p -a https://soundcloud.com/user/sets/playlist
+u-downloader -p -a https://soundcloud.com/user/sets/playlist
 ```
 
 ### Atualizar yt-dlp
 ```bash
-./downloader.sh --update
+u-downloader --update
 ```
 Atualiza o yt-dlp automaticamente para a última versão disponível.
 
